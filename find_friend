@@ -1,0 +1,43 @@
+import random
+
+str = input("Please input one piece of random string :\n")
+
+str_ = "friend"
+
+
+if "f" in str and"r" in str and"i" in str and"e" in str and"n" in str and"d" in str:
+    print(str_)
+else:
+    print("OK!!!!")
+
+input("Press<Enter>")
+    
+
+'''统计'''
+n1 = str.count("f")
+print ("f出现的次数：",n1)
+n2 = str.count("r")
+print ("r出现的次数：",n2)
+n3 = str.count("i")
+print ("i出现的次数：",n3)
+n4 = str.count("e")
+print ("e出现的次数：",n4)
+n5 = str.count("n")
+print ("n出现的次数：",n5)
+n6 = str.count("d")
+print ("d出现的次数：",n6)
+
+
+list = [n1,n2,n3,n4,n5,n6]
+length = len(list)
+
+if n1 == 0 or n2 == 0 or n3 == 0 or n4 == 0 or n5 == 0 or n6 == 0 :
+    print("Can't create friend , not enough")
+else :
+    for i in range(0,length):       #冒泡排序
+        for j in range(i+1,length):
+            if list[i] > list[j]:
+                list[i],list[j] = list[j],list[i]
+    print("能够构建的friend的个数:",list[0])
+
+input("Press<Enter>")

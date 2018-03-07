@@ -1,0 +1,76 @@
+#!/user/bin/env python3
+#coding:utf-8
+
+'''
+阶段性练习-英雄无敌开发之路
+2018年3月6日17点35分
+'''
+
+'''提示语'''
+print("Welcome body, now let us begin our journey of game!!!")
+
+'''注册'''
+name = input("Please input your name first:")
+
+password = input("OK! Now set up your password:")
+
+print("information:")
+print("name is:",name)
+print("password is",password)
+
+'''角色设置'''
+print("Before gaming set up your nickname first :" )
+nickname = input("Nickname:")
+
+#不设置昵称后的默认昵称
+if not nickname:
+    nickname = "player1"
+
+print("1、武僧，2、龙战，3、精灵")
+
+choose = int(input("Choose your character:"))
+
+#初始化角色属性
+shuxin1 = {"HP":200,"Defense":10,"Attack":60}
+shuxin2 = {"HP":300,"Defense":20,"Attack":30}
+shuxin3 = {"HP":100,"Defense":5,"Attack":70}
+
+def character1():
+    return("武僧")
+
+def character2():
+    return("龙战")
+
+def character3():
+    return("精灵")
+
+if choose == 1 :
+    print("welcome",nickname)
+    print("Your choose is:",character1())
+    print("Attributes is:",shuxin1)
+elif choose == 2:
+    print("welcome", nickname)
+    print("Your choose is:",character2())
+    print("Attributes is:", shuxin2)
+else :
+    print("welcome", nickname)
+    print("Your choose is:",character3())
+    print("Attributes is:", shuxin3)
+
+
+'''2018年3月7日10点35分'''
+
+'''移动定义'''
+print("Now you are here: *#### | 'A' for left , 'D' for right |")
+
+userinput = input()
+if userinput == 'D':
+    print("you are here #*###")
+elif userinput == 'A':
+    print("you are here *####")
+
+
+
+
+
+

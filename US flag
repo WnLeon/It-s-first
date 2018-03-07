@@ -1,0 +1,78 @@
+import turtle
+turtle.hideturtle()
+turtle.color("white")
+turtle.speed(10)
+turtle.pensize(1)
+
+
+'''绘制外圈矩形'''
+turtle.fd(494)
+turtle.rt(90)
+turtle.fd(260)
+turtle.rt(90)
+turtle.fd(494)
+turtle.rt(90)
+turtle.fd(260)
+turtle.rt(90)
+
+'''绘制红色条形'''
+for i in range(8):
+    turtle.down()
+    turtle.pensize(20)
+    turtle.color("red")
+    turtle.fd(494)
+    turtle.up()
+    turtle.goto((0,-40*i))
+
+'''绘制蓝色矩形'''
+turtle.home()    
+turtle.down()
+turtle.begin_fill()
+turtle.pensize(1)
+turtle.color("blue","blue")
+for i in range(4):
+    turtle.fd(140)
+    turtle.right(90)
+turtle.end_fill()
+
+
+'''绘制蓝色区域中的1、3、5行五角星'''
+turtle.up()
+turtle.home() 
+turtle.down()
+for y in range(3):
+    turtle.goto((0,-60*y))
+    for x in range(6):
+        turtle.down()
+        turtle.begin_fill()
+        turtle.color("white","white")
+        turtle.pensize(1)
+        for i in range(5):
+            turtle.fd(20)
+            turtle.rt(144)
+            "绘制单个五角星"
+        turtle.end_fill()
+        turtle.up()
+        turtle.goto((x*30,-60*y))
+
+
+"绘制蓝色区域中的2、4行五角星"
+turtle.up()
+turtle.home() 
+turtle.down()
+for y in range(2):
+    turtle.up()
+    turtle.goto((15,-30-60*y))
+    turtle.down()
+    for x in range(5):
+        turtle.down()
+        turtle.begin_fill()
+        turtle.color("white","white")
+        turtle.pensize(1)
+        for i in range(5):
+            turtle.fd(20)
+            turtle.rt(144)    
+        turtle.end_fill()
+        turtle.up()
+        turtle.goto((x*30+15,-30-60*y))       
+

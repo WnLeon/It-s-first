@@ -1,0 +1,12 @@
+print("#########################################################")
+print("冰雹序列")
+print("#########################################################")
+
+while 1:        #一直会循环除非需要break
+    a = int(input("Please input one num :"))
+    if a % 2 == 0 and a != 1 :
+        print(int(a/2))
+    elif a % 2 != 0 and a != 1:
+        print(int(a * 3 + 1))
+    elif a == 1 :
+        break

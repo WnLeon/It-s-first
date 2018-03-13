@@ -1,0 +1,81 @@
+import random
+import string
+
+
+
+'''随机字符串生成器'''
+
+STR1 = [chr(i) for i in range(65,91)] #A-Z
+str1 = [chr(i) for i in range(97,123)] #a-z
+num1 = [chr(i) for i in range(48,58)] #0-9
+
+'''制作特殊字符列表'''
+initspecial = string.punctuation
+special = []
+for i in initspecial:
+    special.append(i)
+
+store1 = STR1 + str1 + num1 + special
+store2 = STR1 + str1 + num1
+store3 = STR1 + str1
+store4 = STR1 + num1
+store5 = str1 + num1
+
+
+######################################################
+'''包含特殊字符'''
+print('1、包含特殊字符大小写字母和数字\n2、大小写字母和数字\n3、大小写字母\n4、大写字母和数字\n5、小写字母和数字')
+a = input('Please confirm if contain special:')
+print('6、6位\n8、8位\n10、10位\n12、12位')
+b = input('how many bit :')
+if a == 1 and b == 6:
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store1)
+print(pass)
+elif a == 2 and b == 6 :
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store2)
+print(pass)
+elif a == 3 and b == 6 :
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store3)
+print(pass)
+elif a == 4 and b == 6 :
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store4)
+print(pass)
+elif a == 5 and b == 6 :
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store5)
+print(pass)
+elif a == 1 and b == 8 :
+    for i in range(8):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store1)
+print(pass)
+elif a == 2 and b == 8 :
+    for i in range(8):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store2)
+print(pass)
+elif a == 3 and b == 8 :
+    for i in range(8):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store3)
+print(pass)
+elif a == 4 and b == 8 :
+    for i in range(8):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store4)
+print(pass)
+elif a == 5 and b == 8 :
+    for i in range(8):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store5)
+print(pass)
+elif a == 1 and b == 10 :
+    for i in range(10):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store1)
+print(pass)
+elif a == 1 and b == 12 :
+    for i in range(12):     #用于控制输出的随机字符串的长度
+        pass = pass + random.choice(store1)
+print(pass)
+else:
+    pass
+    

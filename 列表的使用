@@ -1,0 +1,60 @@
+import string
+import random
+
+
+i1 = [] #定义i1为注册用户信息的列表
+i2 = []
+i3 =i1.append(i2)
+#####################################################
+'''随机字符串生成器'''
+
+STR1 = [chr(i) for i in range(65,91)] #A-Z
+str1 = [chr(i) for i in range(97,123)] #a-z
+num1 = [chr(i) for i in range(48,58)] #0-9
+
+'''制作特殊字符列表'''
+initspecial = string.punctuation
+special = []
+for i in initspecial:
+    special.append(i)
+special.remove("'")
+special.remove('"')
+
+
+store1 = STR1 + str1 + num1 + special
+store2 = STR1 + str1 + num1
+store3 = STR1 + str1
+store4 = STR1 + num1
+store5 = str1 + num1
+
+
+######################################################
+'''name输入'''
+name = input('Please input your name :')
+if not name:
+    for i in range(6):     #用于控制输出的随机字符串的长度
+        name = name + random.choice(store1)
+    print(name)
+else:
+    print(name)
+
+i2.append(name)
+
+
+'''email注册'''
+email = input('Please input your email-address:')
+i2.append(email)
+
+
+'''password设置'''
+while 1:              #循环控制比对两次密码输入是否一致，不一致的话重新设置
+    password = hash(input('Please input your pass:'))
+    repassword = hash(input('Please confirm your pass:'))
+    if password == repassword:
+        i2.append(password)
+        break
+    else :
+        print('!!!Please confirm your pass again')
+
+
+print(i2)

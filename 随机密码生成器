@@ -6,6 +6,8 @@ import string
 
 
 
+
+
 '''随机字符串生成器'''
 
 
@@ -49,11 +51,11 @@ store5 = str1 + num1
 '''包含特殊字符'''
 password = '0'
 
-#print('1、包含特殊字符大小写字母和数字'\n'2、大小写字母和数字'\n'3、大小写字母'\n'4、大写字母和数字'\n'5、小写字母和数字')
+print('1、包含特殊字符大小写字母和数字\n2、大小写字母和数字\n3、大小写字母\n4、大写字母和数字\n5、小写字母和数字')
 
 a = int(input('Please confirm if contain special:'))
 
-#print('6、6位'\n'8、8位'\n'10、10位'\n'12、12位')
+print('6、6位\n8、8位\n10、10位\n12、12位')
 
 b = int(input('how many bit :'))
 

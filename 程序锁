@@ -1,0 +1,57 @@
+'''
+2018年4月2日09点58分
+程序锁
+'''
+
+import os
+
+welcome = 'welcome back the world of heros !!! '
+
+'''player 和 playerpass 的值可以从注册的客户信息中导入属于全局，该处暂时手动定义'''
+
+player = ['wun','maz']
+
+playerpass = {'wun':'123.com','maz':'123.com'}
+
+'''定义空字典以便后续判定输入信息的记录，并不是必要操作，可以省去，加入该部可以在日志信息中记录'''
+
+userpass = {}
+
+i = 0  #计数器定义
+
+while True:
+
+    if os.path.isfile('lock.log'):                         #利用os函数判定是否包含有lock.log这个文件
+
+        print('Sorry,locked!!!\nlater 30S try again')
+
+        break
+    
+    username = input("login:")
+
+    password = input("password:")
+
+    userpass[username] = password
+
+    print (userpass)                                       # 测试时输出，实际环境中可以不输出该字典，只用做记录
+
+    i+= 1                                                  # 控制每次while循环计数自增1，以便后续的次数判断控制
+
+    if username in player and password == playerpass[username]:
+    
+        pass
+
+        print(welcome)
+
+        break
+        
+    else:
+
+        if i >= 3:
+
+            open('lock.log','w').write(username)
+
+            print('locked by %s'%username)
+
+            break
+

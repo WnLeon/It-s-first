@@ -1,0 +1,12 @@
+import time
+
+def deco(func):            #func作为形参传入
+    startT = time.time()
+    func()
+    endT = time.time()
+    msecs = (endT - startT)*1000
+    print('it;s %f ms :' % msecs)
+
+
+
+#运行时需要指定形参所对应的具体实参

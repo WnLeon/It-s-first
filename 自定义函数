@@ -1,0 +1,66 @@
+x = 0
+
+def functionAB(x):
+    
+    x = float(input('Please input a number:'))
+    
+    if x >= 0:
+
+        print (x)
+
+        return
+    
+    else :
+
+        print (-x)
+
+        return
+
+functionAB(x)
+
+
+def machine(x = 5,y = '奶油'):
+
+    print('制作一个 %d 元的 %s 口味的冰激凌'%(x,y))
+
+x = int(input('choose money :'))
+
+y = input('choose taste :')
+
+machine(x,y)
+
+
+
+A = [10,'巧克力']
+
+B = {'x':20,'y':'柠檬'}
+
+machine(*A)  #输入列表
+
+machine(**B)  #输入字典
+
+
+
+
+#冗余处理
+def machine1(x = 5,y = '奶油',*arg,**kv): #*arg接收列表式冗余数据，**kv接收键值对式数据
+
+    print('制作一个 %d 元的 %s 口味的冰激凌'%(x,y))\
+
+    print('arg:',arg)
+
+    print('kv:',kv)
+
+C = [3,'巧克力',4,5,66]
+
+D = {'x':4,'y':'西瓜','z':'df','f':4}
+
+machine1(*C)
+
+machine1(**D)
+
+
+input('press any key')
+
+
+

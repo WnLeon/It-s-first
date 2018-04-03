@@ -1,0 +1,24 @@
+import random
+
+
+usermsg ={'hp':100,'attack':60,'defense':0}
+
+def watermelon(hp):
+    hp += 10
+    return hp
+
+def apple(hp):
+    hp += 10
+    return hp
+
+def boom(hp):
+    hp -= 20
+    return hp
+
+eventlist = [apple,watermelon,boom]
+
+
+usermsg['hp']=random.choice(eventlist)(usermsg['hp'])
+
+
+print(usermsg)
